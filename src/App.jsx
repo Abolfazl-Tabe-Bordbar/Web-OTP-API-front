@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const OTPInput = () => {
   const [otp, setOtp] = useState('');
+  const [error, setError] = useState('');
 
   const handleOTPFetch = async () => {
     if ('OTPCredential' in window) {
@@ -21,15 +22,15 @@ const OTPInput = () => {
           alert(otpCredential.code)
           setOtp(otpCredential.code); // کد OTP را تنظیم کنید
         } else {
-          alert('Invalid OTP received or domain mismatch');
+          setError('Invalid OTP received or domain mismatch');
           
-          alert('Invalid OTP received or domain mismatch.');
+          setError('Invalid OTP received or domain mismatch.');
         }
       } catch (error) {
-        alert('Error fetching OTP:', error);
+        setError('Error fetching OTP:', error);
       }
     } else {
-      alert('Web OTP API not supported on this browser.');
+      setError('Web OTP API not supported on this browser.');
     }
   };
 
@@ -42,6 +43,7 @@ const OTPInput = () => {
     <div className='mx-auto flex flex-col justify-center items-center  w-32 h-32'>
       <h2>Test OTP</h2>
       <span>OTP is {otp}</span>
+      <span>Error OTP is {error}</span>
       <input
       className='bg-gray-100 h-10 rounded-md text-red-600  text-center'
         type="text"
