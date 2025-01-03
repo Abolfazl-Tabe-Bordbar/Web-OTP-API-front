@@ -41,7 +41,7 @@ const OTPInput = () => {
         className="bg-gray-100 h-10 rounded-md text-black text-center"
         type="text"
         value={otp}
-        placeholder="Enter OTP"
+        placeholder="کد ورود"
         // readOnly // فقط خواندنی چون به صورت خودکار پر می‌شود
       />
     </div>
