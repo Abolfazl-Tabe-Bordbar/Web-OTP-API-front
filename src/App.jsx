@@ -17,12 +17,13 @@ const OTPInput = () => {
 
         // بررسی اینکه پیامک حاوی کد OTP است
         if (otpCredential && otpCredential.code) {
+          
           alert(otpCredential.code)
           setOtp(otpCredential.code); // کد OTP را تنظیم کنید
         } else {
-          console.log('Invalid OTP received or domain mismatch');
+          alert('Invalid OTP received or domain mismatch');
           
-          console.error('Invalid OTP received or domain mismatch.');
+          alert('Invalid OTP received or domain mismatch.');
         }
       } catch (error) {
         alert('Error fetching OTP:', error);
