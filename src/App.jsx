@@ -38,7 +38,7 @@ const OTPInput = () => {
     <div className='mx-auto flex flex-col justify-center items-center  w-32 h-32'>
       <h2>Test OTP</h2>
       <input
-      className='bg-gray-400 h-10 rounded-md text-white'
+      className='bg-gray-100 h-10 rounded-md text-white text-center'
         type="text"
         value={otp}
         onChange={(e) => setOtp(e.target.value)}
