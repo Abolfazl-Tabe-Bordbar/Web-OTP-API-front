@@ -43,7 +43,7 @@ const OTPInput = () => {
       <h2>Test OTP</h2>
       <span>OTP is {otp}</span>
       <input
-      className='bg-gray-100 h-10 rounded-md text-white text-center'
+      className='bg-gray-100 h-10 rounded-md text-red-600  text-center'
         type="text"
         name='code'
         // value={otp}
